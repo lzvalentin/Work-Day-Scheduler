@@ -1,6 +1,9 @@
-// moment().format('dddd', "MMM Do YY");
+$('.saveBtn').on('click', function(){
+    var value = $(this).siblings('.description').val();
+    var key = $(this).parent().attr('id');
 
-window.setInterval(function (){
-    $('#currentDay').html(moment().format('dddd MMM Do'))
-}, 1000);
+    localStorage.setItem(key, value)
+});
+
+
 
